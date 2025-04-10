@@ -1,0 +1,6 @@
+Sub DeleteEmptyRows()
+    Dim i As Long
+    For i = Cells(Rows.Count, 1).End(xlUp).Row To 1 Step -1
+        If Application.CountA(Rows(i)) = 0 Then Rows(i).Delete
+    Next i
+End Sub
